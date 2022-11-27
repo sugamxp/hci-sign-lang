@@ -1,0 +1,147 @@
+<html>
+  <head>
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+    />
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <!-- Load the latest version of TensorFlow.js -->
+    <script src="https://unpkg.com/@tensorflow/tfjs"></script>
+    <script src="https://unpkg.com/@tensorflow-models/mobilenet"></script>
+    <script src="https://unpkg.com/@tensorflow-models/knn-classifier"></script>
+
+    <style>
+      /* Modify the background color */
+       *{
+        font-family: 'Poppins', sans-serif;
+
+       }
+      .navbar-custom {
+          background-color: #A077EF;
+      }
+      /* Modify brand and text color */
+       
+      .navbar-custom .navbar-brand,
+      .navbar-custom .navbar-text {
+          color: green;
+      }
+  </style>
+
+
+  </head>
+
+  <body>
+    <!-- <nav class="mb-1 navbar navbar-expand-lg navbar-dark orange lighten-1">
+      <span class="navbar-text white-text text-center navText">
+        Indian Sign Language Detector
+      </span>
+    </nav> -->
+    <nav class="navbar navbar-custom mb-2 text-center">
+      <span class="navbar-brand mb-0 h1 text-white"
+         >Sign Language Detector</span
+      >
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <button class="btn btn-md btn-danger btn-block mt-3" id="clearModel">
+            Clear Model
+          </button>
+        </div>
+        <div class="col-md-6">
+          <button class="btn btn-md btn-danger btn-block mt-3" id="clear">
+            Clear Output
+          </button>
+        </div>
+      </div>
+      <div class="h3 mt-4">Output:</div>
+
+      <div class="h3" id="console"></div>
+      <div class="row">
+        <div class="col-md-6">
+          <video
+            autoplay
+            playsinline
+            muted
+            id="webcam"
+            width="400"
+            height="400"
+          ></video>
+        </div>
+        </div>
+      </div>
+
+      <!-- Add an image that we will use to test -->
+      <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6" id="add">
+          <form id="addWordForm" autocomplete="off">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Add New Word"
+              id="newWord"
+            />
+            <br />
+            <br />
+            <input
+              type="button"
+              id="addWord"
+              class="btn btn-md btn-block btn-primary"
+              value="Add Word"
+            />
+          </form>
+          <div >
+            <button id="Idle" class="btn btn-md btn-block btn-secondary">
+              IDLE data
+            </button>
+          </div>
+        
+        </div>
+        </div>
+
+
+      </div>
+      <div class="container-fluid">
+        <div class="h3">Words:</div>
+        <p class="" id="wordList"></p>
+      </div>
+
+    </div>
+    <!-- axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- Load index.js after the content of the page -->
+    <script src="index.js"></script>
+    <!-- JQuery -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+    ></script>
+    <!-- Bootstrap tooltips -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"
+    ></script>
+    <!-- Bootstrap core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"
+    ></script>
+    <!-- MDB core JavaScript -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.10/js/mdb.min.js"
+    ></script>
+  </body>
+</html>
