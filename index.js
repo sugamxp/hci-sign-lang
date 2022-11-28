@@ -105,10 +105,10 @@ async function app() {
     localStorage.removeItem('noOfImages');
     setDefaultValue();
   });
-  while (true) {
+  window.setInterval(async function () {
+    console.log('running');
     if (classifier.getNumClasses() > 0) {
       // console.log(classes);
-
       // Get the activation from mobilenet from the webcam.
       const activation = net.infer(webcamElement, 'conv_preds');
       // Get the most likely class and confidences from the classifier module.
@@ -126,7 +126,7 @@ async function app() {
       }
     }
     await tf.nextFrame();
-  }
+  }, 2000);
 }
 
 async function setupWebcam() {
