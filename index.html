@@ -55,31 +55,29 @@
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-6">
-          <button class="btn btn-md btn-danger btn-block mt-3" id="clearModel">
+          <button class="btn btn-sm btn-danger btn-block mt-3" id="clearModel">
             Clear Model
           </button>
         </div>
         <div class="col-md-6">
-          <button class="btn btn-md btn-danger btn-block mt-3" id="clear">
+          <button class="btn btn-sm btn-danger btn-block mt-3" id="clear">
             Clear Output
           </button>
         </div>
       </div>
       <div class="h3 mt-4">Output:</div>
-
-      <div class="h3" id="console"></div>
       <div class="row">
-        <div class="col-md-6">
+        <div class="container-fluid">
           <video
             autoplay
             playsinline
             muted
             id="webcam"
-            width="400"
-            height="400"
+            width="350"
+            height="350"
           ></video>
         </div>
-        </div>
+        <div class="container-fluid">
       </div>
 
       <!-- Add an image that we will use to test -->
@@ -93,25 +91,21 @@
               placeholder="Add New Word"
               id="newWord"
             />
-            <br />
-            <br />
             <input
               type="button"
               id="addWord"
-              class="btn btn-md btn-block btn-primary"
+              class="btn btn-sm btn-block btn-primary mt-2"
               value="Add Word"
             />
           </form>
           <div >
-            <button id="Idle" class="btn btn-md btn-block btn-secondary">
+            <button id="Idle" class="btn btn-sm btn-block btn-secondary">
               IDLE data
             </button>
           </div>
         
         </div>
         </div>
-
-
       </div>
       <div class="container-fluid">
         <div class="h3">Words:</div>
